@@ -6,12 +6,11 @@
 /*   By: bdecourt <bdecourt@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 19:35:16 by bdecourt          #+#    #+#             */
-/*   Updated: 2026/05/07 22:23:23 by bdecourt         ###   ########.fr       */
+/*   Updated: 2026/05/27 22:12:07 by bdecourt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
 
 char	*freefirst(char *first, char *sec)
 {
@@ -53,7 +52,7 @@ char	*read_file(int fd, char **readed)
 char	*extract_line(char *buffer)
 {
 	char	*line;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (!buffer[i])
@@ -78,8 +77,8 @@ char	*extract_line(char *buffer)
 char	*remove_line(char *buffer)
 {
 	char	*line;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

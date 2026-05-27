@@ -6,7 +6,7 @@
 /*   By: bdecourt <bdecourt@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 19:35:18 by bdecourt          #+#    #+#             */
-/*   Updated: 2026/05/07 22:23:10 by bdecourt         ###   ########.fr       */
+/*   Updated: 2026/05/27 22:12:24 by bdecourt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -25,8 +25,8 @@ size_t	ft_strlen(const char *s)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	if (!s1)
 		s1 = "";
@@ -48,8 +48,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
-	char			tofind;
+	size_t	i;
+	char	tofind;
 
 	i = 0;
 	tofind = (char)c;
